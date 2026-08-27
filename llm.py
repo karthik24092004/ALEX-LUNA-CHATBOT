@@ -13,7 +13,8 @@ def get_response(system_prompt, user_message):
     """
 
     completion = client.chat.completions.create(
-        model="llama-3.1-8b-instant",
+        model="openai/gpt-oss-20b",
+        
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_message}
